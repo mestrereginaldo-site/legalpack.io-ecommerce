@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Legal Pack E-commerce | Proteção Jurídica Completa para Seu E-commerce</title>
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚖️</text></svg>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Clash+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -18,6 +19,21 @@
             --gradient-dark: linear-gradient(135deg, #070815 0%, #0A0B1E 100%);
             --neon-shadow: 0 0 30px rgba(0, 240, 255, 0.3);
             --neon-shadow-pink: 0 0 30px rgba(255, 46, 136, 0.3);
+            
+            /* Tema claro - valores padrão serão atualizados via JS */
+            --bg-color: #0A0B1E;
+            --text-color: #FFFFFF;
+            --card-bg: rgba(10, 11, 30, 0.7);
+            --card-border: rgba(0, 240, 255, 0.1);
+            --input-bg: rgba(255, 255, 255, 0.05);
+        }
+
+        .theme-light {
+            --bg-color: #F0F4FF;
+            --text-color: #0A0B1E;
+            --card-bg: rgba(255, 255, 255, 0.9);
+            --card-border: rgba(0, 240, 255, 0.2);
+            --input-bg: rgba(10, 11, 30, 0.05);
         }
         
         * {
@@ -32,11 +48,11 @@
         
         body {
             font-family: 'Space Grotesk', sans-serif;
-            background-color: var(--dark);
-            color: white;
+            background-color: var(--bg-color);
+            color: var(--text-color);
             overflow-x: hidden;
             opacity: 0;
-            transition: opacity 1s ease;
+            transition: all 0.5s ease;
         }
         
         body.loaded {
@@ -50,10 +66,10 @@
         
         /* Glassmorphism */
         .glass {
-            background: rgba(10, 11, 30, 0.7);
+            background: var(--card-bg);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(0, 240, 255, 0.1);
+            border: 1px solid var(--card-border);
             border-radius: 20px;
         }
         
@@ -75,6 +91,11 @@
             background: rgba(7, 8, 21, 0.95);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(0, 240, 255, 0.1);
+        }
+        
+        .theme-light header {
+            background: rgba(240, 244, 255, 0.95);
+            border-bottom: 1px solid rgba(0, 240, 255, 0.2);
         }
         
         .nav-container {
@@ -125,7 +146,7 @@
         }
         
         .nav-links a {
-            color: white;
+            color: var(--text-color);
             text-decoration: none;
             font-weight: 500;
             font-size: 1.1rem;
@@ -146,6 +167,28 @@
         
         .nav-links a:hover:after {
             width: 100%;
+        }
+        
+        /* Botão de Tema */
+        .theme-toggle {
+            background: transparent;
+            border: 2px solid var(--secondary);
+            color: var(--secondary);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .theme-toggle:hover {
+            background: var(--secondary);
+            color: var(--primary);
+            transform: rotate(30deg);
         }
         
         .btn {
@@ -188,6 +231,23 @@
             box-shadow: var(--neon-shadow);
         }
         
+        /* Credencial OAB */
+        .oab-badge {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(0, 240, 255, 0.1);
+            border: 1px solid rgba(0, 240, 255, 0.3);
+            border-radius: 50px;
+            padding: 8px 20px;
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .oab-badge i {
+            color: #00F0FF;
+            margin-right: 10px;
+        }
+        
         /* Hero Section */
         .hero {
             min-height: 100vh;
@@ -225,7 +285,7 @@
             font-size: 4rem;
             line-height: 1.1;
             margin-bottom: 30px;
-            background: linear-gradient(135deg, #FFFFFF 0%, #00F0FF 50%, #7B61FF 100%);
+            background: linear-gradient(135deg, var(--text-color) 0%, #00F0FF 50%, #7B61FF 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: gradientShift 8s ease infinite;
@@ -243,6 +303,10 @@
             color: rgba(255, 255, 255, 0.8);
             margin-bottom: 40px;
             max-width: 600px;
+        }
+        
+        .theme-light .hero-text p {
+            color: rgba(10, 11, 30, 0.8);
         }
         
         .hero-buttons {
@@ -279,6 +343,10 @@
             margin-top: 10px;
         }
         
+        .theme-light .stat-text {
+            color: rgba(10, 11, 30, 0.7);
+        }
+        
         .hero-visual {
             position: relative;
         }
@@ -299,6 +367,10 @@
             display: flex;
             align-items: center;
             gap: 10px;
+        }
+        
+        .theme-light .dashboard-header {
+            background: rgba(10, 11, 30, 0.1);
         }
         
         .dashboard-dot {
@@ -328,6 +400,10 @@
             justify-content: center;
         }
         
+        .theme-light .dashboard-item {
+            background: rgba(10, 11, 30, 0.05);
+        }
+        
         .dashboard-item h4 {
             color: #00F0FF;
             font-size: 1rem;
@@ -337,6 +413,10 @@
         .dashboard-item p {
             font-size: 0.9rem;
             color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .theme-light .dashboard-item p {
+            color: rgba(10, 11, 30, 0.7);
         }
         
         /* Pain Points */
@@ -354,7 +434,7 @@
         .section-header h2 {
             font-size: 3.5rem;
             margin-bottom: 30px;
-            background: linear-gradient(135deg, #FFFFFF 0%, #00F0FF 100%);
+            background: linear-gradient(135deg, var(--text-color) 0%, #00F0FF 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -363,6 +443,10 @@
             font-size: 1.3rem;
             color: rgba(255, 255, 255, 0.8);
             line-height: 1.6;
+        }
+        
+        .theme-light .section-header p {
+            color: rgba(10, 11, 30, 0.8);
         }
         
         .pain-grid {
@@ -426,13 +510,17 @@
         .pain-card h3 {
             font-size: 1.8rem;
             margin-bottom: 20px;
-            color: white;
+            color: var(--text-color);
         }
         
         .pain-card p {
             color: rgba(255, 255, 255, 0.8);
             line-height: 1.6;
             font-size: 1.1rem;
+        }
+        
+        .theme-light .pain-card p {
+            color: rgba(10, 11, 30, 0.8);
         }
         
         /* Features */
@@ -500,13 +588,17 @@
         .feature-card h3 {
             font-size: 2rem;
             margin-bottom: 20px;
-            color: white;
+            color: var(--text-color);
         }
         
         .feature-card p {
             color: rgba(255, 255, 255, 0.8);
             line-height: 1.6;
             font-size: 1.1rem;
+        }
+        
+        .theme-light .feature-card p {
+            color: rgba(10, 11, 30, 0.8);
         }
         
         /* Pricing */
@@ -586,6 +678,10 @@
             color: rgba(255, 255, 255, 0.7);
         }
         
+        .theme-light .price span {
+            color: rgba(10, 11, 30, 0.7);
+        }
+        
         .pricing-features {
             list-style: none;
             margin: 40px 0;
@@ -596,6 +692,10 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             display: flex;
             align-items: center;
+        }
+        
+        .theme-light .pricing-features li {
+            border-bottom: 1px solid rgba(10, 11, 30, 0.1);
         }
         
         .pricing-features li i {
@@ -648,50 +748,8 @@
             color: rgba(255, 255, 255, 0.8);
         }
         
-        /* Testimonials */
-        .testimonials {
-            padding: 150px 40px;
-            position: relative;
-        }
-        
-        .testimonial-slider {
-            max-width: 1000px;
-            margin: 0 auto;
-            position: relative;
-        }
-        
-        .testimonial {
-            padding: 60px;
-            border-radius: 30px;
-            text-align: center;
-            position: relative;
-        }
-        
-        .testimonial-avatar {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            margin: 0 auto 30px;
-            border: 3px solid var(--secondary);
-        }
-        
-        .testimonial-text {
-            font-size: 1.3rem;
-            font-style: italic;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 30px;
-            line-height: 1.6;
-        }
-        
-        .testimonial-author {
-            font-weight: 700;
-            font-size: 1.2rem;
-            color: white;
-            margin-bottom: 5px;
-        }
-        
-        .testimonial-role {
-            color: rgba(255, 255, 255, 0.7);
+        .theme-light .case-stat-text {
+            color: rgba(10, 11, 30, 0.8);
         }
         
         /* FAQ */
@@ -725,9 +783,13 @@
             background: rgba(255, 255, 255, 0.05);
         }
         
+        .theme-light .faq-question:hover {
+            background: rgba(10, 11, 30, 0.05);
+        }
+        
         .faq-question h3 {
             font-size: 1.3rem;
-            color: white;
+            color: var(--text-color);
         }
         
         .faq-answer {
@@ -745,6 +807,10 @@
         .faq-answer p {
             color: rgba(255, 255, 255, 0.8);
             line-height: 1.6;
+        }
+        
+        .theme-light .faq-answer p {
+            color: rgba(10, 11, 30, 0.8);
         }
         
         /* CTA Section */
@@ -800,7 +866,7 @@
             max-width: 500px;
         }
         
-        /* Contact Form */
+        /* Contact Form - CORRIGIDO */
         .contact-form-section {
             padding: 150px 40px;
             position: relative;
@@ -817,9 +883,8 @@
         .contact-form {
             padding: 60px;
             border-radius: 30px;
-            opacity: 0;
-            transform: translateX(-50px);
-            animation: fadeInRight 0.8s ease forwards;
+            opacity: 1; /* Alterado de 0 para 1 */
+            transform: translateX(0); /* Alterado de -50px para 0 */
         }
         
         .form-group {
@@ -836,10 +901,10 @@
         .form-control {
             width: 100%;
             padding: 20px;
-            background: rgba(255, 255, 255, 0.05);
+            background: var(--input-bg);
             border: 1px solid rgba(0, 240, 255, 0.3);
             border-radius: 15px;
-            color: white;
+            color: var(--text-color);
             font-family: 'Space Grotesk', sans-serif;
             font-size: 1.1rem;
             transition: all 0.3s ease;
@@ -889,6 +954,10 @@
             transition: color 0.3s ease;
         }
         
+        .theme-light .footer-links a {
+            color: rgba(10, 11, 30, 0.8);
+        }
+        
         .footer-links a:hover {
             color: var(--secondary);
         }
@@ -907,15 +976,20 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
+            color: var(--text-color);
             text-decoration: none;
             transition: all 0.3s ease;
             border: 1px solid rgba(0, 240, 255, 0.1);
         }
         
+        .theme-light .social-links a {
+            background: rgba(10, 11, 30, 0.05);
+        }
+        
         .social-links a:hover {
             background: var(--gradient);
             transform: translateY(-5px);
+            color: var(--primary);
         }
         
         .copyright {
@@ -924,6 +998,11 @@
             padding-top: 30px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .theme-light .copyright {
+            border-top: 1px solid rgba(10, 11, 30, 0.1);
+            color: rgba(10, 11, 30, 0.6);
         }
         
         /* Mobile Menu */
@@ -1007,6 +1086,10 @@
                 z-index: 1000;
             }
             
+            .theme-light .nav-links {
+                background: rgba(240, 244, 255, 0.98);
+            }
+            
             .nav-links.active {
                 display: flex;
             }
@@ -1060,7 +1143,7 @@
                 font-size: 1.1rem;
             }
             
-            .pain-points, .features, .pricing, .case-study, .testimonials, .faq, .cta, .contact-form-section, .guarantee {
+            .pain-points, .features, .pricing, .case-study, .faq, .cta, .contact-form-section, .guarantee {
                 padding: 100px 20px;
             }
             
@@ -1152,8 +1235,11 @@
                 <li><a href="#contato">Contato</a></li>
             </ul>
             
-            <div class="nav-cta" id="navCta">
-                <a href="#planos" class="btn">Começar Agora</a>
+            <div style="display: flex; align-items: center;">
+                <button class="theme-toggle" id="themeToggle" title="Alternar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="#planos" class="btn" style="margin-left: 20px;">Começar Agora</a>
             </div>
             
             <button class="mobile-menu-btn" id="mobileMenuBtn">
@@ -1168,6 +1254,13 @@
             <div class="hero-text">
                 <h1>Proteção Jurídica Completa para Seu <span style="display: block; background: linear-gradient(135deg, #FF2E88 0%, #7B61FF 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">E-commerce</span></h1>
                 <p>Evite multas da LGPD, processos trabalhistas e contratos ruins. Sistema de IA que identifica riscos 24/7 e protege seu negócio automaticamente.</p>
+                
+                <!-- Credencial OAB Adicionada -->
+                <div class="oab-badge">
+                    <i class="fas fa-balance-scale"></i>
+                    <span>Adv. Reginaldo Oliveira | OAB/SC: 57.879</span>
+                </div>
+                
                 <div class="hero-buttons">
                     <a href="#planos" class="btn">Começar por R$ 997/mês</a>
                     <a href="#case-study" class="btn" style="background: transparent; border: 2px solid var(--secondary); color: var(--secondary);">Ver Case de Sucesso</a>
@@ -1378,98 +1471,6 @@
         </div>
     </section>
 
-    <!-- Case Study -->
-    <section class="case-study" id="case-study">
-        <div class="section-header">
-            <h2>Case de Sucesso</h2>
-            <p>Como o E-commerce "Moda Express" economizou R$ 280.000 em 6 meses</p>
-        </div>
-        
-        <div class="case-content">
-            <div>
-                <h3 style="font-size: 2.5rem; margin-bottom: 30px; color: white;">Situação Antes:</h3>
-                <ul style="list-style: none; margin-bottom: 50px;">
-                    <li style="padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center;">
-                        <i class="fas fa-times" style="color: #FF2E88; margin-right: 15px; font-size: 1.2rem;"></i>
-                        <span>Multa de R$ 120.000 da LGPD por vazamento de dados</span>
-                    </li>
-                    <li style="padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center;">
-                        <i class="fas fa-times" style="color: #FF2E88; margin-right: 15px; font-size: 1.2rem;"></i>
-                        <span>3 processos trabalhistas em andamento (R$ 45.000 cada)</span>
-                    </li>
-                    <li style="padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center;">
-                        <i class="fas fa-times" style="color: #FF2E88; margin-right: 15px; font-size: 1.2rem;"></i>
-                        <span>Fornecedor chinês sumiu com R$ 80.000 sem contrato</span>
-                    </li>
-                    <li style="padding: 15px 0; display: flex; align-items: center;">
-                        <i class="fas fa-times" style="color: #FF2E88; margin-right: 15px; font-size: 1.2rem;"></i>
-                        <span>Chargebacks de 8% do faturamento (R$ 35.000/mês)</span>
-                    </li>
-                </ul>
-                
-                <h3 style="font-size: 2.5rem; margin-bottom: 30px; color: white;">Situação Depois:</h3>
-                <ul style="list-style: none;">
-                    <li style="padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center;">
-                        <i class="fas fa-check" style="color: #00F0FF; margin-right: 15px; font-size: 1.2rem;"></i>
-                        <span>LGPD 100% em conformidade com selo de proteção</span>
-                    </li>
-                    <li style="padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center;">
-                        <i class="fas fa-check" style="color: #00F0FF; margin-right: 15px; font-size: 1.2rem;"></i>
-                        <span>Processos trabalhistas reduzidos em 92%</span>
-                    </li>
-                    <li style="padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center;">
-                        <i class="fas fa-check" style="color: #00F0FF; margin-right: 15px; font-size: 1.2rem;"></i>
-                        <span>Contratos internacionais com garantias reais</span>
-                    </li>
-                    <li style="padding: 15px 0; display: flex; align-items: center;">
-                        <i class="fas fa-check" style="color: #00F0FF; margin-right: 15px; font-size: 1.2rem;"></i>
-                        <span>Chargebacks reduzidos para 1,2% do faturamento</span>
-                    </li>
-                </ul>
-            </div>
-            
-            <div>
-                <div class="glass" style="padding: 50px; border-radius: 25px;">
-                    <h3 style="margin-bottom: 20px; color: white;">Resultados em Números:</h3>
-                    <div class="case-stats">
-                        <div class="case-stat glass">
-                            <div class="case-stat-number" data-count="280">280</div>
-                            <div class="case-stat-text">milhões economizados</div>
-                        </div>
-                        <div class="case-stat glass">
-                            <div class="case-stat-number" data-count="92">92</div>
-                            <div class="case-stat-text">% menos processos</div>
-                        </div>
-                        <div class="case-stat glass">
-                            <div class="case-stat-number" data-count="6">6</div>
-                            <div class="case-stat-text">meses para ROI</div>
-                        </div>
-                        <div class="case-stat glass">
-                            <div class="case-stat-number" data-count="150">150</div>
-                            <div class="case-stat-text">horas de advogado/mês</div>
-                        </div>
-                    </div>
-                    
-                    <div style="margin-top: 40px; padding: 30px; background: rgba(0, 240, 255, 0.1); border-radius: 15px;">
-                        <h4 style="color: white; margin-bottom: 15px;">Depoimento do CEO:</h4>
-                        <p style="color: rgba(255, 255, 255, 0.9); font-style: italic; line-height: 1.6;">
-                            "O Legal Pack mudou completamente nossa operação. Em vez de gastar R$ 15.000/mês com advogados e ainda ter problemas, agora pago R$ 997 e durmo tranquilo. A IA identificou riscos que nem sabíamos que existiam."
-                        </p>
-                        <div style="display: flex; align-items: center; margin-top: 20px;">
-                            <div style="width: 50px; height: 50px; border-radius: 50%; background: #7B61FF; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                                <i class="fas fa-user" style="color: white;"></i>
-                            </div>
-                            <div>
-                                <div style="font-weight: 700; color: white;">Carlos Mendes</div>
-                                <div style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem;">CEO - Moda Express</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Guarantee -->
     <section class="guarantee">
         <div class="guarantee-content">
@@ -1488,15 +1489,15 @@
     <!-- CTA Section -->
     <section class="cta">
         <div class="cta-content">
-            <h2 style="font-size: 3.5rem; margin-bottom: 30px; color: white;">Proteja Seu E-commerce Hoje</h2>
-            <p style="font-size: 1.5rem; color: rgba(255, 255, 255, 0.9); margin-bottom: 50px; line-height: 1.6;">
+            <h2 style="font-size: 3.5rem; margin-bottom: 30px; color: var(--text-color);">Proteja Seu E-commerce Hoje</h2>
+            <p style="font-size: 1.5rem; color: var(--text-color); opacity: 0.9; margin-bottom: 50px; line-height: 1.6;">
                 Cada dia sem proteção jurídica é um risco desnecessário para seu negócio.
             </p>
             <div class="cta-buttons">
                 <a href="#contato" class="btn" style="padding: 20px 50px; font-size: 1.2rem;">Começar Agora por R$ 997/mês</a>
                 <a href="#contato" class="btn" style="padding: 20px 50px; font-size: 1.2rem; background: transparent; border: 2px solid var(--secondary); color: var(--secondary);">Agendar Demonstração</a>
             </div>
-            <p style="color: rgba(255, 255, 255, 0.7); margin-top: 30px; font-size: 0.9rem;">
+            <p style="color: var(--text-color); opacity: 0.7; margin-top: 30px; font-size: 0.9rem;">
                 ⚡ Implementação em 24 horas • Cancelamento a qualquer momento • Suporte especializado
             </p>
         </div>
@@ -1536,7 +1537,7 @@
                     <i class="fas fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer" id="faq-answer-3">
-                    <p>Em 24 horas você já terá: 1) Dashboard de risgos ativo, 2) Primeira análise LGPD, 3) Modelos de contratos personalizados. A implementação completa (todos os módulos) leva de 3 a 7 dias, dependendo do tamanho do seu e-commerce.</p>
+                    <p>Em 24 horas você já terá: 1) Dashboard de riscos ativo, 2) Primeira análise LGPD, 3) Modelos de contratos personalizados. A implementação completa (todos os módulos) leva de 3 a 7 dias, dependendo do tamanho do seu e-commerce.</p>
                 </div>
             </div>
             
@@ -1571,26 +1572,26 @@
         
         <div class="contact-container">
             <div class="contact-form glass">
-                <h3 style="margin-bottom: 30px; color: white;">Solicitar Demonstração</h3>
+                <h3 style="margin-bottom: 30px; color: var(--text-color);">Solicitar Demonstração</h3>
                 <form id="demoForm">
                     <div class="form-group">
                         <label for="name">Nome Completo</label>
-                        <input type="text" id="name" class="form-control" required>
+                        <input type="text" id="name" class="form-control" required placeholder="Seu nome completo">
                     </div>
                     
                     <div class="form-group">
                         <label for="company">Nome do E-commerce</label>
-                        <input type="text" id="company" class="form-control" required>
+                        <input type="text" id="company" class="form-control" required placeholder="Nome da sua loja virtual">
                     </div>
                     
                     <div class="form-group">
                         <label for="email">E-mail Corporativo</label>
-                        <input type="email" id="email" class="form-control" required>
+                        <input type="email" id="email" class="form-control" required placeholder="seu@email.com">
                     </div>
                     
                     <div class="form-group">
                         <label for="phone">WhatsApp</label>
-                        <input type="tel" id="phone" class="form-control" required>
+                        <input type="tel" id="phone" class="form-control" required placeholder="(11) 99999-9999">
                     </div>
                     
                     <div class="form-group">
@@ -1622,7 +1623,7 @@
             
             <div>
                 <div class="glass" style="padding: 50px; border-radius: 25px; margin-bottom: 40px;">
-                    <h3 style="margin-bottom: 20px; color: white;">O que você recebe na demonstração:</h3>
+                    <h3 style="margin-bottom: 20px; color: var(--text-color);">O que você recebe na demonstração:</h3>
                     <ul style="list-style: none;">
                         <li style="padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center;">
                             <i class="fas fa-play-circle" style="color: #00F0FF; margin-right: 15px;"></i>
@@ -1644,19 +1645,19 @@
                 </div>
                 
                 <div class="glass" style="padding: 50px; border-radius: 25px;">
-                    <h3 style="margin-bottom: 20px; color: white;">Contato Direto</h3>
+                    <h3 style="margin-bottom: 20px; color: var(--text-color);">Contato Direto</h3>
                     <div style="margin-bottom: 20px; display: flex; align-items: center;">
                         <i class="fas fa-phone" style="color: #00F0FF; margin-right: 15px; font-size: 1.2rem;"></i>
                         <div>
                             <div style="font-weight: 600;">(11) 99999-9999</div>
-                            <div style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">WhatsApp/Telefone</div>
+                            <div style="color: var(--text-color); opacity: 0.7; font-size: 0.9rem;">WhatsApp/Telefone</div>
                         </div>
                     </div>
                     <div style="display: flex; align-items: center;">
                         <i class="fas fa-envelope" style="color: #00F0FF; margin-right: 15px; font-size: 1.2rem;"></i>
                         <div>
                             <div style="font-weight: 600;">contato@legalpack.io</div>
-                            <div style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">E-mail Corporativo</div>
+                            <div style="color: var(--text-color); opacity: 0.7; font-size: 0.9rem;">E-mail Corporativo</div>
                         </div>
                     </div>
                 </div>
@@ -1669,7 +1670,14 @@
         <div class="footer-content">
             <div>
                 <a href="#" class="logo" style="font-size: 2.5rem; margin-bottom: 30px; display: inline-block;">LEGAL PACK <span style="color: #00F0FF;">ECOMMERCE</span></a>
-                <p style="color: rgba(255,255,255,0.8); margin-bottom: 30px; max-width: 400px;">Proteção jurídica inteligente para e-commerces. Automatizamos 80% do trabalho preventivo para você focar no que importa: crescer seu negócio.</p>
+                <p style="color: var(--text-color); opacity: 0.8; margin-bottom: 30px; max-width: 400px;">Proteção jurídica inteligente para e-commerces. Automatizamos 80% do trabalho preventivo para você focar no que importa: crescer seu negócio.</p>
+                
+                <!-- Credencial OAB no Footer também -->
+                <div class="oab-badge" style="margin-bottom: 20px;">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Adv. Reginaldo Oliveira | OAB/SC: 57.879</span>
+                </div>
+                
                 <div class="social-links">
                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
@@ -1691,10 +1699,10 @@
             <div>
                 <h3>Empresa</h3>
                 <ul class="footer-links">
-                    <li><a href="#case-study">Cases de Sucesso</a></li>
                     <li><a href="#planos">Planos</a></li>
                     <li><a href="#contato">Contato</a></li>
                     <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#">Blog</a></li>
                 </ul>
             </div>
             
@@ -1721,10 +1729,36 @@
             // Add loaded class to body
             document.body.classList.add('loaded');
             
+            // Toggle de tema claro/escuro
+            const themeToggle = document.getElementById('themeToggle');
+            const themeIcon = themeToggle.querySelector('i');
+            
+            // Verificar tema salvo no localStorage
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            if (savedTheme === 'light') {
+                document.body.classList.add('theme-light');
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            }
+            
+            // Alternar tema
+            themeToggle.addEventListener('click', function() {
+                document.body.classList.toggle('theme-light');
+                
+                if (document.body.classList.contains('theme-light')) {
+                    localStorage.setItem('theme', 'light');
+                    themeIcon.classList.remove('fa-moon');
+                    themeIcon.classList.add('fa-sun');
+                } else {
+                    localStorage.setItem('theme', 'dark');
+                    themeIcon.classList.remove('fa-sun');
+                    themeIcon.classList.add('fa-moon');
+                }
+            });
+            
             // Mobile menu toggle
             const mobileMenuBtn = document.getElementById('mobileMenuBtn');
             const navLinks = document.getElementById('navLinks');
-            const navCta = document.getElementById('navCta');
             
             mobileMenuBtn.addEventListener('click', function() {
                 navLinks.classList.toggle('active');
@@ -1750,7 +1784,7 @@
             });
             
             // Counter animation
-            const counters = document.querySelectorAll('.stat-number, .case-stat-number');
+            const counters = document.querySelectorAll('.stat-number');
             
             const animateCounters = () => {
                 counters.forEach(counter => {
@@ -1785,29 +1819,41 @@
                 observer.observe(counter);
             });
             
-            // Form submission
-            document.getElementById('demoForm').addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Collect form data
-                const formData = {
-                    name: document.getElementById('name').value,
-                    company: document.getElementById('company').value,
-                    email: document.getElementById('email').value,
-                    phone: document.getElementById('phone').value,
-                    faturamento: document.getElementById('faturamento').value,
-                    problema: document.getElementById('problema').value
-                };
-                
-                // Show success message
-                alert('Demonstração solicitada! Entraremos em contato em até 2 horas úteis.\n\nPrepare-se para uma análise completa do seu e-commerce.');
-                
-                // Reset form
-                this.reset();
-                
-                // Scroll to top
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
+            // Form submission - CORRIGIDO
+            const demoForm = document.getElementById('demoForm');
+            if (demoForm) {
+                demoForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Coletar dados do formulário
+                    const formData = {
+                        name: document.getElementById('name').value,
+                        company: document.getElementById('company').value,
+                        email: document.getElementById('email').value,
+                        phone: document.getElementById('phone').value,
+                        faturamento: document.getElementById('faturamento').value,
+                        problema: document.getElementById('problema').value
+                    };
+                    
+                    // Validação básica
+                    if (!formData.name || !formData.email || !formData.phone) {
+                        alert('Por favor, preencha todos os campos obrigatórios.');
+                        return;
+                    }
+                    
+                    // Simular envio (substituir por seu backend real)
+                    console.log('Dados do formulário:', formData);
+                    
+                    // Mostrar mensagem de sucesso
+                    alert('✅ Demonstração solicitada com sucesso!\n\nEntraremos em contato em até 2 horas úteis via WhatsApp.\n\nPrepare-se para uma análise completa do seu e-commerce.');
+                    
+                    // Resetar formulário
+                    this.reset();
+                    
+                    // Scroll para o topo
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
             
             // Smooth scroll for navigation links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
