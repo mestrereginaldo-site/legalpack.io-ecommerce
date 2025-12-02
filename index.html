@@ -1,12 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <!-- Meta Tags SEO Otimizadas -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legal Pack E-commerce | Proteção Jurídica Completa para Seu E-commerce</title>
+    
+    <!-- Título Principal Otimizado -->
+    <title>Legal Pack E-commerce | Proteção Jurídica Completa para E-commerce | Evite Multas LGPD</title>
+    
+    <!-- Meta Description Otimizada -->
+    <meta name="description" content="Proteção jurídica completa para e-commerce. Evite multas da LGPD, processos trabalhistas e contratos ruins. Sistema de IA que identifica riscos 24/7. A partir de R$497/mês.">
+    
+    <!-- Palavras-chave -->
+    <meta name="keywords" content="proteção jurídica e-commerce, LGPD e-commerce, contratos e-commerce, advogado e-commerce, multas LGPD, proteção legal loja virtual, direito digital e-commerce">
+    
+    <!-- Open Graph para Redes Sociais -->
+    <meta property="og:title" content="Legal Pack E-commerce | Proteção Jurídica Completa">
+    <meta property="og:description" content="Proteção jurídica completa para seu e-commerce. Evite multas e processos. IA que identifica riscos 24/7.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://legalpackecommerce.com.br">
+    <meta property="og:image" content="https://legalpackecommerce.com.br/og-image.jpg">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Legal Pack E-commerce | Proteção Jurídica Completa">
+    <meta name="twitter:description" content="Sistema de proteção jurídica para e-commerce. IA que prevê riscos e evita problemas.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://legalpackecommerce.com.br">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Legal Pack E-commerce",
+        "description": "Proteção jurídica completa para e-commerces",
+        "url": "https://legalpackecommerce.com.br",
+        "telephone": "+55-11-99999-9999",
+        "priceRange": "R$497 - R$2.497",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "BR"
+        },
+        "serviceType": "Proteção Jurídica para E-commerce",
+        "offers": {
+            "@type": "AggregateOffer",
+            "lowPrice": "497",
+            "highPrice": "2497",
+            "priceCurrency": "BRL",
+            "availability": "https://schema.org/InStock"
+        }
+    }
+    </script>
+    
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚖️</text></svg>">
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Clash+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <style>
         :root {
             --primary: #0A0B1E;
@@ -19,21 +75,6 @@
             --gradient-dark: linear-gradient(135deg, #070815 0%, #0A0B1E 100%);
             --neon-shadow: 0 0 30px rgba(0, 240, 255, 0.3);
             --neon-shadow-pink: 0 0 30px rgba(255, 46, 136, 0.3);
-            
-            /* Tema claro - valores padrão serão atualizados via JS */
-            --bg-color: #0A0B1E;
-            --text-color: #FFFFFF;
-            --card-bg: rgba(10, 11, 30, 0.7);
-            --card-border: rgba(0, 240, 255, 0.1);
-            --input-bg: rgba(255, 255, 255, 0.05);
-        }
-
-        .theme-light {
-            --bg-color: #F0F4FF;
-            --text-color: #0A0B1E;
-            --card-bg: rgba(255, 255, 255, 0.9);
-            --card-border: rgba(0, 240, 255, 0.2);
-            --input-bg: rgba(10, 11, 30, 0.05);
         }
         
         * {
@@ -48,11 +89,11 @@
         
         body {
             font-family: 'Space Grotesk', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
+            background-color: var(--dark);
+            color: white;
             overflow-x: hidden;
             opacity: 0;
-            transition: all 0.5s ease;
+            transition: opacity 1s ease;
         }
         
         body.loaded {
@@ -64,12 +105,11 @@
             font-weight: 700;
         }
         
-        /* Glassmorphism */
         .glass {
-            background: var(--card-bg);
+            background: rgba(10, 11, 30, 0.7);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
-            border: 1px solid var(--card-border);
+            border: 1px solid rgba(0, 240, 255, 0.1);
             border-radius: 20px;
         }
         
@@ -80,7 +120,6 @@
             border: 1px solid rgba(123, 97, 255, 0.2);
         }
         
-        /* Header */
         header {
             position: fixed;
             top: 0;
@@ -91,11 +130,6 @@
             background: rgba(7, 8, 21, 0.95);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(0, 240, 255, 0.1);
-        }
-        
-        .theme-light header {
-            background: rgba(240, 244, 255, 0.95);
-            border-bottom: 1px solid rgba(0, 240, 255, 0.2);
         }
         
         .nav-container {
@@ -146,7 +180,7 @@
         }
         
         .nav-links a {
-            color: var(--text-color);
+            color: white;
             text-decoration: none;
             font-weight: 500;
             font-size: 1.1rem;
@@ -167,28 +201,6 @@
         
         .nav-links a:hover:after {
             width: 100%;
-        }
-        
-        /* Botão de Tema */
-        .theme-toggle {
-            background: transparent;
-            border: 2px solid var(--secondary);
-            color: var(--secondary);
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-left: 20px;
-            transition: all 0.3s ease;
-        }
-        
-        .theme-toggle:hover {
-            background: var(--secondary);
-            color: var(--primary);
-            transform: rotate(30deg);
         }
         
         .btn {
@@ -231,24 +243,6 @@
             box-shadow: var(--neon-shadow);
         }
         
-        /* Credencial OAB */
-        .oab-badge {
-            display: inline-flex;
-            align-items: center;
-            background: rgba(0, 240, 255, 0.1);
-            border: 1px solid rgba(0, 240, 255, 0.3);
-            border-radius: 50px;
-            padding: 8px 20px;
-            margin-top: 20px;
-            font-size: 0.9rem;
-        }
-        
-        .oab-badge i {
-            color: #00F0FF;
-            margin-right: 10px;
-        }
-        
-        /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -285,7 +279,7 @@
             font-size: 4rem;
             line-height: 1.1;
             margin-bottom: 30px;
-            background: linear-gradient(135deg, var(--text-color) 0%, #00F0FF 50%, #7B61FF 100%);
+            background: linear-gradient(135deg, #FFFFFF 0%, #00F0FF 50%, #7B61FF 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: gradientShift 8s ease infinite;
@@ -303,10 +297,6 @@
             color: rgba(255, 255, 255, 0.8);
             margin-bottom: 40px;
             max-width: 600px;
-        }
-        
-        .theme-light .hero-text p {
-            color: rgba(10, 11, 30, 0.8);
         }
         
         .hero-buttons {
@@ -343,10 +333,6 @@
             margin-top: 10px;
         }
         
-        .theme-light .stat-text {
-            color: rgba(10, 11, 30, 0.7);
-        }
-        
         .hero-visual {
             position: relative;
         }
@@ -367,10 +353,6 @@
             display: flex;
             align-items: center;
             gap: 10px;
-        }
-        
-        .theme-light .dashboard-header {
-            background: rgba(10, 11, 30, 0.1);
         }
         
         .dashboard-dot {
@@ -400,10 +382,6 @@
             justify-content: center;
         }
         
-        .theme-light .dashboard-item {
-            background: rgba(10, 11, 30, 0.05);
-        }
-        
         .dashboard-item h4 {
             color: #00F0FF;
             font-size: 1rem;
@@ -415,11 +393,6 @@
             color: rgba(255, 255, 255, 0.7);
         }
         
-        .theme-light .dashboard-item p {
-            color: rgba(10, 11, 30, 0.7);
-        }
-        
-        /* Pain Points */
         .pain-points {
             padding: 150px 40px;
             position: relative;
@@ -434,7 +407,7 @@
         .section-header h2 {
             font-size: 3.5rem;
             margin-bottom: 30px;
-            background: linear-gradient(135deg, var(--text-color) 0%, #00F0FF 100%);
+            background: linear-gradient(135deg, #FFFFFF 0%, #00F0FF 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -443,10 +416,6 @@
             font-size: 1.3rem;
             color: rgba(255, 255, 255, 0.8);
             line-height: 1.6;
-        }
-        
-        .theme-light .section-header p {
-            color: rgba(10, 11, 30, 0.8);
         }
         
         .pain-grid {
@@ -510,7 +479,7 @@
         .pain-card h3 {
             font-size: 1.8rem;
             margin-bottom: 20px;
-            color: var(--text-color);
+            color: white;
         }
         
         .pain-card p {
@@ -519,11 +488,6 @@
             font-size: 1.1rem;
         }
         
-        .theme-light .pain-card p {
-            color: rgba(10, 11, 30, 0.8);
-        }
-        
-        /* Features */
         .features {
             padding: 150px 40px;
             background: var(--gradient-dark);
@@ -588,7 +552,7 @@
         .feature-card h3 {
             font-size: 2rem;
             margin-bottom: 20px;
-            color: var(--text-color);
+            color: white;
         }
         
         .feature-card p {
@@ -597,11 +561,6 @@
             font-size: 1.1rem;
         }
         
-        .theme-light .feature-card p {
-            color: rgba(10, 11, 30, 0.8);
-        }
-        
-        /* Pricing */
         .pricing {
             padding: 150px 40px;
             position: relative;
@@ -678,10 +637,6 @@
             color: rgba(255, 255, 255, 0.7);
         }
         
-        .theme-light .price span {
-            color: rgba(10, 11, 30, 0.7);
-        }
-        
         .pricing-features {
             list-style: none;
             margin: 40px 0;
@@ -694,17 +649,12 @@
             align-items: center;
         }
         
-        .theme-light .pricing-features li {
-            border-bottom: 1px solid rgba(10, 11, 30, 0.1);
-        }
-        
         .pricing-features li i {
             color: var(--secondary);
             margin-right: 15px;
             font-size: 1.2rem;
         }
         
-        /* Case Study */
         .case-study {
             padding: 150px 40px;
             background: var(--gradient-dark);
@@ -748,11 +698,6 @@
             color: rgba(255, 255, 255, 0.8);
         }
         
-        .theme-light .case-stat-text {
-            color: rgba(10, 11, 30, 0.8);
-        }
-        
-        /* FAQ */
         .faq {
             padding: 150px 40px;
             background: var(--gradient-dark);
@@ -783,13 +728,9 @@
             background: rgba(255, 255, 255, 0.05);
         }
         
-        .theme-light .faq-question:hover {
-            background: rgba(10, 11, 30, 0.05);
-        }
-        
         .faq-question h3 {
             font-size: 1.3rem;
-            color: var(--text-color);
+            color: white;
         }
         
         .faq-answer {
@@ -809,11 +750,6 @@
             line-height: 1.6;
         }
         
-        .theme-light .faq-answer p {
-            color: rgba(10, 11, 30, 0.8);
-        }
-        
-        /* CTA Section */
         .cta {
             padding: 150px 40px;
             position: relative;
@@ -833,7 +769,6 @@
             flex-wrap: wrap;
         }
         
-        /* Guarantee */
         .guarantee {
             padding: 100px 40px;
             text-align: center;
@@ -866,7 +801,6 @@
             max-width: 500px;
         }
         
-        /* Contact Form - CORRIGIDO */
         .contact-form-section {
             padding: 150px 40px;
             position: relative;
@@ -883,8 +817,6 @@
         .contact-form {
             padding: 60px;
             border-radius: 30px;
-            opacity: 1; /* Alterado de 0 para 1 */
-            transform: translateX(0); /* Alterado de -50px para 0 */
         }
         
         .form-group {
@@ -901,10 +833,10 @@
         .form-control {
             width: 100%;
             padding: 20px;
-            background: var(--input-bg);
+            background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(0, 240, 255, 0.3);
             border-radius: 15px;
-            color: var(--text-color);
+            color: white;
             font-family: 'Space Grotesk', sans-serif;
             font-size: 1.1rem;
             transition: all 0.3s ease;
@@ -916,7 +848,6 @@
             box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
         }
         
-        /* Footer */
         footer {
             padding: 100px 40px 50px;
             background: var(--gradient-dark);
@@ -954,10 +885,6 @@
             transition: color 0.3s ease;
         }
         
-        .theme-light .footer-links a {
-            color: rgba(10, 11, 30, 0.8);
-        }
-        
         .footer-links a:hover {
             color: var(--secondary);
         }
@@ -976,14 +903,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--text-color);
+            color: white;
             text-decoration: none;
             transition: all 0.3s ease;
             border: 1px solid rgba(0, 240, 255, 0.1);
-        }
-        
-        .theme-light .social-links a {
-            background: rgba(10, 11, 30, 0.05);
         }
         
         .social-links a:hover {
@@ -1000,12 +923,6 @@
             color: rgba(255, 255, 255, 0.6);
         }
         
-        .theme-light .copyright {
-            border-top: 1px solid rgba(10, 11, 30, 0.1);
-            color: rgba(10, 11, 30, 0.6);
-        }
-        
-        /* Mobile Menu */
         .mobile-menu-btn {
             display: none;
             background: none;
@@ -1016,7 +933,6 @@
             z-index: 1001;
         }
         
-        /* Responsive */
         @media (max-width: 1200px) {
             .hero-text h1 {
                 font-size: 3.5rem;
@@ -1084,10 +1000,6 @@
                 align-items: center;
                 justify-content: center;
                 z-index: 1000;
-            }
-            
-            .theme-light .nav-links {
-                background: rgba(240, 244, 255, 0.98);
             }
             
             .nav-links.active {
@@ -1221,7 +1133,7 @@
         }
     </style>
 </head>
-<body>
+<body itemscope itemtype="https://schema.org/WebPage">
     <!-- Header -->
     <header id="header">
         <div class="nav-container">
@@ -1235,11 +1147,8 @@
                 <li><a href="#contato">Contato</a></li>
             </ul>
             
-            <div style="display: flex; align-items: center;">
-                <button class="theme-toggle" id="themeToggle" title="Alternar tema">
-                    <i class="fas fa-moon"></i>
-                </button>
-                <a href="#planos" class="btn" style="margin-left: 20px;">Começar Agora</a>
+            <div class="nav-cta" id="navCta">
+                <a href="#planos" class="btn">Começar Agora</a>
             </div>
             
             <button class="mobile-menu-btn" id="mobileMenuBtn">
@@ -1252,14 +1161,8 @@
     <section class="hero" id="home">
         <div class="hero-content">
             <div class="hero-text">
-                <h1>Proteção Jurídica Completa para Seu <span style="display: block; background: linear-gradient(135deg, #FF2E88 0%, #7B61FF 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">E-commerce</span></h1>
-                <p>Evite multas da LGPD, processos trabalhistas e contratos ruins. Sistema de IA que identifica riscos 24/7 e protege seu negócio automaticamente.</p>
-                
-                <!-- Credencial OAB Adicionada -->
-                <div class="oab-badge">
-                    <i class="fas fa-balance-scale"></i>
-                    <span>Adv. Reginaldo Oliveira | OAB/SC: 57.879</span>
-                </div>
+                <h1 itemprop="headline">Proteção Jurídica Completa para Seu <span style="display: block; background: linear-gradient(135deg, #FF2E88 0%, #7B61FF 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">E-commerce</span></h1>
+                <p itemprop="description">Evite multas da LGPD, processos trabalhistas e contratos ruins. Sistema de IA que identifica riscos 24/7 e protege seu negócio automaticamente.</p>
                 
                 <div class="hero-buttons">
                     <a href="#planos" class="btn">Começar por R$ 997/mês</a>
@@ -1407,7 +1310,7 @@
                     <i class="fas fa-sync-alt"></i>
                 </div>
                 <h3>Atualização Automática</h3>
-                <p>Sempre atualizado com as últimas leis e jurisprudências. Seus documentos se adaptam automaticamente.</p>
+                <p>Sempre atualizado com as últimas leis e jurisprudências. Seus documentos se adaptas automaticamente.</p>
             </div>
         </div>
     </section>
@@ -1489,15 +1392,15 @@
     <!-- CTA Section -->
     <section class="cta">
         <div class="cta-content">
-            <h2 style="font-size: 3.5rem; margin-bottom: 30px; color: var(--text-color);">Proteja Seu E-commerce Hoje</h2>
-            <p style="font-size: 1.5rem; color: var(--text-color); opacity: 0.9; margin-bottom: 50px; line-height: 1.6;">
+            <h2 style="font-size: 3.5rem; margin-bottom: 30px; color: white;">Proteja Seu E-commerce Hoje</h2>
+            <p style="font-size: 1.5rem; color: rgba(255, 255, 255, 0.9); margin-bottom: 50px; line-height: 1.6;">
                 Cada dia sem proteção jurídica é um risco desnecessário para seu negócio.
             </p>
             <div class="cta-buttons">
                 <a href="#contato" class="btn" style="padding: 20px 50px; font-size: 1.2rem;">Começar Agora por R$ 997/mês</a>
                 <a href="#contato" class="btn" style="padding: 20px 50px; font-size: 1.2rem; background: transparent; border: 2px solid var(--secondary); color: var(--secondary);">Agendar Demonstração</a>
             </div>
-            <p style="color: var(--text-color); opacity: 0.7; margin-top: 30px; font-size: 0.9rem;">
+            <p style="color: rgba(255, 255, 255, 0.7); margin-top: 30px; font-size: 0.9rem;">
                 ⚡ Implementação em 24 horas • Cancelamento a qualquer momento • Suporte especializado
             </p>
         </div>
@@ -1572,7 +1475,7 @@
         
         <div class="contact-container">
             <div class="contact-form glass">
-                <h3 style="margin-bottom: 30px; color: var(--text-color);">Solicitar Demonstração</h3>
+                <h3 style="margin-bottom: 30px; color: white;">Solicitar Demonstração</h3>
                 <form id="demoForm">
                     <div class="form-group">
                         <label for="name">Nome Completo</label>
@@ -1623,7 +1526,7 @@
             
             <div>
                 <div class="glass" style="padding: 50px; border-radius: 25px; margin-bottom: 40px;">
-                    <h3 style="margin-bottom: 20px; color: var(--text-color);">O que você recebe na demonstração:</h3>
+                    <h3 style="margin-bottom: 20px; color: white;">O que você recebe na demonstração:</h3>
                     <ul style="list-style: none;">
                         <li style="padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center;">
                             <i class="fas fa-play-circle" style="color: #00F0FF; margin-right: 15px;"></i>
@@ -1645,19 +1548,19 @@
                 </div>
                 
                 <div class="glass" style="padding: 50px; border-radius: 25px;">
-                    <h3 style="margin-bottom: 20px; color: var(--text-color);">Contato Direto</h3>
+                    <h3 style="margin-bottom: 20px; color: white;">Contato Direto</h3>
                     <div style="margin-bottom: 20px; display: flex; align-items: center;">
                         <i class="fas fa-phone" style="color: #00F0FF; margin-right: 15px; font-size: 1.2rem;"></i>
                         <div>
                             <div style="font-weight: 600;">(11) 99999-9999</div>
-                            <div style="color: var(--text-color); opacity: 0.7; font-size: 0.9rem;">WhatsApp/Telefone</div>
+                            <div style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">WhatsApp/Telefone</div>
                         </div>
                     </div>
                     <div style="display: flex; align-items: center;">
                         <i class="fas fa-envelope" style="color: #00F0FF; margin-right: 15px; font-size: 1.2rem;"></i>
                         <div>
                             <div style="font-weight: 600;">contato@legalpack.io</div>
-                            <div style="color: var(--text-color); opacity: 0.7; font-size: 0.9rem;">E-mail Corporativo</div>
+                            <div style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">E-mail Corporativo</div>
                         </div>
                     </div>
                 </div>
@@ -1670,14 +1573,7 @@
         <div class="footer-content">
             <div>
                 <a href="#" class="logo" style="font-size: 2.5rem; margin-bottom: 30px; display: inline-block;">LEGAL PACK <span style="color: #00F0FF;">ECOMMERCE</span></a>
-                <p style="color: var(--text-color); opacity: 0.8; margin-bottom: 30px; max-width: 400px;">Proteção jurídica inteligente para e-commerces. Automatizamos 80% do trabalho preventivo para você focar no que importa: crescer seu negócio.</p>
-                
-                <!-- Credencial OAB no Footer também -->
-                <div class="oab-badge" style="margin-bottom: 20px;">
-                    <i class="fas fa-graduation-cap"></i>
-                    <span>Adv. Reginaldo Oliveira | OAB/SC: 57.879</span>
-                </div>
-                
+                <p style="color: rgba(255,255,255,0.8); margin-bottom: 30px; max-width: 400px;">Proteção jurídica inteligente para e-commerces. Automatizamos 80% do trabalho preventivo para você focar no que importa: crescer seu negócio.</p>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
@@ -1728,33 +1624,6 @@
         document.addEventListener('DOMContentLoaded', function() {
             // Add loaded class to body
             document.body.classList.add('loaded');
-            
-            // Toggle de tema claro/escuro
-            const themeToggle = document.getElementById('themeToggle');
-            const themeIcon = themeToggle.querySelector('i');
-            
-            // Verificar tema salvo no localStorage
-            const savedTheme = localStorage.getItem('theme') || 'dark';
-            if (savedTheme === 'light') {
-                document.body.classList.add('theme-light');
-                themeIcon.classList.remove('fa-moon');
-                themeIcon.classList.add('fa-sun');
-            }
-            
-            // Alternar tema
-            themeToggle.addEventListener('click', function() {
-                document.body.classList.toggle('theme-light');
-                
-                if (document.body.classList.contains('theme-light')) {
-                    localStorage.setItem('theme', 'light');
-                    themeIcon.classList.remove('fa-moon');
-                    themeIcon.classList.add('fa-sun');
-                } else {
-                    localStorage.setItem('theme', 'dark');
-                    themeIcon.classList.remove('fa-sun');
-                    themeIcon.classList.add('fa-moon');
-                }
-            });
             
             // Mobile menu toggle
             const mobileMenuBtn = document.getElementById('mobileMenuBtn');
@@ -1819,7 +1688,7 @@
                 observer.observe(counter);
             });
             
-            // Form submission - CORRIGIDO
+            // Form submission
             const demoForm = document.getElementById('demoForm');
             if (demoForm) {
                 demoForm.addEventListener('submit', function(e) {
